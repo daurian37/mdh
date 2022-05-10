@@ -1,0 +1,154 @@
+<app-header></app-header>
+
+<div class="headtext px-5">
+  <h2 class="ui left floated header">MyDoctorHome <small>la médécine à la maison</small></h2>
+  
+</div>
+
+<br>
+<div class="row">
+        
+         <div class="card">
+             <div style="text-align: center;">
+                <h2><b>Mon profil</b></h2>
+            <img src="assets\Images\10382.png" class="ml-3 mt-3 rounded-circle" style="height:106px;width:106px" alt="Avatar">
+        </div><hr>
+            <div class="container">
+              <h4><b><a routerLink="../profil">daurian Balenvokolo</a></b></h4> 
+              <p>Dveloppeur Front end et Back end</p> 
+            </div>
+          </div>
+           
+          <div class="statut">
+                <form action="">
+                    <div class="container">
+                      
+                      <p>Vos statuts seront rendus publics et pourront être lu par tout les abonnés de MyDoctorHome</p>
+                      <hr>
+                  
+                      <div class="form-group">
+                        
+                        <textarea name="message" id="message" style="text-align: center;border-radius: 50px" placeholder="Publier un statut" class="form-control form-control-lg"></textarea>
+                        </div>
+                               
+                      <hr>
+                      
+                  
+                      <button type="submit" class="registerbtn">poster</button>
+                    </div>
+                    
+                    
+                  </form>
+                  
+            </div>
+
+            <div class="card">
+              <img src="assets\Images\10382.png" alt="Avatar" style="width:100%">
+              <div class="container">
+                <h4><b>MyDoctorHome</b></h4> <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae 
+                  scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor.
+                     Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus 
+                     vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. 
+                     In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus 
+                     gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
+                      tempor porta.</span></p>
+
+                      <button onclick ="myFunction()" id="myBtn" class="btn-success">Read more</button>
+
+<script>
+  function myFunction() {
+    dots = document.getElementById("dots");
+     moreText = document.getElementById("more");
+     btnText = document.getElementById("myBtn");
+  
+    if (this.document.style.display === "none") {
+      this.dots.style.display = "inline";
+      this.btnText.innerHTML = "Read more"; 
+      this.moreText.style.display = "none";
+    } else {
+      this.dots.style.display = "none";
+      this.btnText.innerHTML = "Read less"; 
+      this.moreText.style.display = "inline";
+    }
+  }
+  </script>
+
+                
+              </div>
+            </div>
+
+        </div>
+   
+    <br>
+
+    <div class="row">
+         <div class="vertical-menu">
+            <a href="#">Mes rendez vous</a>
+            <a href="#">Messagerie instantanée</a>
+            <a href="#">Mes groupes</a>
+            <a href="#">Creer un groupe</a>
+            <a href="#">Sponsorisé</a>
+       
+          </div>
+          <br>
+
+          <div class="publication">
+            
+                <div class="container">
+                  <span style="float:right;">16 min</span>
+                  <p><img src="assets\Images\10382.png" class="ml-3 mt-3 rounded-circle" style="height:50px;width:50px" alt="Avatar"> Daurian Balenvokolo</p>
+                  
+              <hr>
+                <p>ici sera placé le contenu de la publication. Voici ma publication dit l'abonné</p>
+                           
+                <br>
+                  <button class="btn">Aimer</button>
+
+                  <button class="btn">Commenter</button>
+
+                  <button class="btn">Partager</button>
+                </div> <br> <hr style="height: 20px;background-color: rgb(121, 204, 121);"> 
+              
+      
+            
+          <div class="container">
+            <span style="float:right;">36 min</span>
+            <p><img src="assets\Images\10382.png" class="ml-3 mt-3 rounded-circle" style="height:50px;width:50px" alt="Avatar"> Charles Balenvokolo</p>
+            
+            <hr>
+          <p>Salut les gars vous allez bien ?</p>
+                     
+          <br>
+            <button class="btn">Aimer</button>
+
+            <button class="btn">Commenter</button>
+
+            <button class="btn">Partager</button>
+          </div>
+
+          <br> <hr style="height: 20px;background-color: rgb(121, 204, 121);;">  
+
+          <div class="container">
+            <span style="float:right;">42 min</span>
+            <p><img src="assets\Images\10382.png" class="ml-3 mt-3 rounded-circle" style="height:50px;width:50px" alt="Avatar"> Smeth Kana</p>
+            
+            <hr>
+          <p>Salut je suis un grand codeur </p>
+                     
+          <br>
+            <button class="btn">Aimer</button>
+
+            <button class="btn">Commenter</button>
+
+            <button class="btn">Partager</button>
+          </div>
+             
+  </div>
+
+        </div><br><br>
+         
+
+
+          

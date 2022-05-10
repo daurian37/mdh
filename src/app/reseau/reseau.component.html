@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+
+<div class="container-fluid">
+    
+    <div class="headtext px-5">
+        <h2 class="ui left floated header">MyDoctorHome <small>la médécine à la maison</small></h2>
+        <div class="ui clearing divider"></div>
+    </div> 
+    <br>
+
+    
+    	<div class="row col-lg-10 offset-1 jumbotron">
+            <div class="col-lg-6">
+                <h2 class="titrage">Réseau</h2>
+                <p btext>MyDoctorHome c'est aussi un réseau d'échange et de partage
+                facilitant ainsi l'échange entre professionnels de santé et particuliers.<br>
+                Grâce à son réseau et son forum, vous pouvez consulter les publications et conseils des professionnels de santé mais aussi discuter entre amis.
+                Echangez vos connaissances afin de changer le monde.
+                </p>
+            </div>
+         
+            <div class="col-lg-6">
+                <div>
+                <img src="assets/Images/dc1.jpg" class="imgC">
+                </div>
+            </div>
+              
+        </div>
+
+
+<div>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">
+        <h3>{{user.nom}} {{user.prenom}}</h3>
+        <p>{{user.email }}</p>
+        <p>{{user.telephone }}</p>
+        <p>{{user.fonction }}</p>
+        <p>{{user.sexe }}</p>
+        <p>{{user.datenaissance }}</p>
+    </li>
+</ul>
+
+</div>
+
+<br><br><br>

@@ -1,0 +1,176 @@
+<app-headerindex> </app-headerindex>
+
+<div class="container-fluid p-0">
+
+    <div class="headtext px-5">
+        <h2 class="ui left floated header">MyDoctorHome <small>la médécine à la maison</small></h2>
+        <hr>
+    </div>
+
+
+<!-- Début bouton login -->
+
+
+<div class="modal fade" id="myModal"  role="dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"  [ngClass]="{'show' :showModal}">
+    <div class="modal-dialog" role="document">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"  (click)="showModal=false">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <div class="modal-body">
+
+            <!-- gère l'affichage des erreurs au dessus du formulaire-->
+
+        
+  <!-- fin-->
+
+          <form class="p-5" role="form" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login(f)" #f="ngForm">
+
+            <div class="form-group">
+              <label for="mail"><span class="fas fa-user"></span> Adresse mail</label>
+              <input type="email" class="form-control" formControlName="username" id="mail" name="mail" required placeholder="nom@gmail.com" required="required" [ngModel]="defaultmail">
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="fas fa-eye-open"></span> Mot de passe</label>
+              <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Enter password" [ngModel]="passworddefault">
+            </div>
+            <div class="ui checkbox">
+              <input type="checkbox" tabindex="0" value="" checked>
+              <label class="mt-0">Se souvenir de moi</label>
+            </div>
+       <button type="submit" class="btn btn-success btn-block" (click)="onSignIn()">Se connecter</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-xl pull-left" data-dismiss="modal"><i class="fas fa-repeat"></i></button>
+            <label>Pas encore membre?  <a routerLink="../inscription">Créer un compte</a> | <a href="#">Mot de passe oublié</a> </label>    
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- fin bouton login -->
+
+
+<div class="p-0 mr-3 mt-3">
+    
+            <nav class="boutton_connexion">
+                <ul>
+                    <li><button type="submit" name="Connexion" class="btn btn-success btn-default px-5" id="myBtn" (click)="showModal=true"> Se connecter <i class="fas fa-user"></i></button></li>
+
+                    <li><a routerLink="../inscription"><button type="submit"  class="btn btn-success px-5">S'inscrire <i class="fas fa-user-edit"></i></button></a></li>
+                </ul>
+            </nav>
+</div>
+
+<br><br><br><br>
+
+        <div class="container-fluid">
+           
+            <ngb-carousel>
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img src="assets/Images/slide.jpg" alt="Random first slide">
+                </div>
+                <div class="carousel-caption">
+                    <h5 class="titrage">Acceuil</h5>
+                    <p class="btext">Bienvenue dans votre plateforme socio-professionnelle médecinale Partager, discuter, acheter et vendre en ligne, bien plus encore! grâce à MyDoctorHome</p>
+                      <div class="">
+                        <a routerLink="../a_propos"><button class="btn btn-outline-success my-2 my-sm-0">En savoir plus </button></a>
+                      </div>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img src="assets/Images/slide2.jpg" alt="Random second slide">
+                </div>
+                <div class="carousel-caption">
+                    <h5 class="titrage">Acceuil</h5>
+                    <p class="btext">Bienvenue dans votre plateforme socio-professionnelle médecinale Partager, discuter, acheter et vendre en ligne, bien plus encore! grâce à MyDoctorHome</p>
+                      <div class="">
+                        <a routerLink="../a_propos"><button class="btn btn-outline-success my-2 my-sm-0">En savoir plus </button></a>
+                      </div>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img src="assets/Images/slide.jpg"  alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                    <h5 class="titrage">Acceuil</h5>
+                    <p class="btext">Bienvenue dans votre plateforme socio-professionnelle médecinale Partager, discuter, acheter et vendre en ligne, bien plus encore! grâce à MyDoctorHome</p>
+                      <div class="">
+                        <a routerLink="../a_propos"><button class="btn btn-outline-success my-2 my-sm-0">En savoir plus </button></a>
+                      </div>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+            </div>
+<br>
+
+
+
+<div class="px-0">
+		<div class="row col-lg-10 offset-1 jumbotron">
+            <div class="col-lg-7">
+                <h2 class="titrage">Pharmacie en ligne</h2><br>
+                <div class="btext">
+                	<p> Fini les temps d'attente dans les pharmacies<br> Avec MyDoctorHome commander vos produits dans la pharmacie la plus proche et faites vous livrer chez vous <br>Bien plus encore, commander des produits médicals en France et à l'étranger
+                							</p>                
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+                <img src="assets/Images/dc1.jpg" class="imgC">
+            </div>
+
+        </div>
+
+
+<!--Section docteur en ligne et prise de rendez-vous-->
+
+
+		<div class="row col-lg-10 offset-1 jumbotron">
+            <div class="col-lg-7">
+                <h2 class="titrage">Prise de rendez-vous chez le médecin et Téléconsulation</h2><br>
+             
+                <div class="btext">
+                	<p> Fini les temps d'attente dans les pharmacies<br> Avec MyDoctorHome commander vos produits dans la pharmacie la plus proche et faites vous livrer chez vous <br>Bien plus encore, commander des produits médicals en France et à l'étranger
+                							</p>                
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="assets/Images/dc2.jpg" class="imgC">
+            </div>
+
+        </div>
+		
+<!--Section reseau-->
+
+
+    <div class="row col-lg-10 offset-1 jumbotron">
+        <div class="col-lg-7">
+            <h2 class="titrage">Large réseau d'échange et de partage</h2><br>
+
+            <div class="btext">
+                <p> MyDoctorHome c'est aussi un réseau d'échange et de partage<br>
+                MyDoctorHome facilite l'échange entre professionnels de santé et particuliers<br>
+            Grâce à son réseau et son forum, vous pouvez consulter les publications et conseils des professionnels de santé mais aussi discuter entre amis
+                </p>                
+            </div>
+        </div>
+
+            <div class="col-lg-5">
+                <img src="assets/Images/dc3.jpg" class="imgC">
+            </div>
+    </div>
+ <!--/div-->
+ </div>
+
+

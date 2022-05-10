@@ -1,0 +1,94 @@
+<app-headerindex> </app-headerindex>
+
+<div class="headtext px-5">
+  <h2 class="ui left floated header">MyDoctorHome <small>la médécine à la maison</small></h2>
+  
+</div>
+
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+  <div class="container">
+    <h1 style="color: green;">Inscription</h1>
+    <p>Veuillez remplir ce formulaire pour creer un compte MDH</p>
+    <hr>
+
+ <div class="form-group">
+
+    <label for="nom"><b>Nom (s)</b></label>
+    <input type="text" placeholder="Entrer votre nom" name="nom"  id="nom" class="form-control" formControlName="nom" >
+  </div>
+
+  <div class="form-group">
+    <label for="prenom"><b>Prénom (s)</b></label>
+    <input type="text" placeholder="Entrer votre prénom" name="prenom" id="prenom" class="form-control" formControlName="prenom">
+  </div>
+
+    <div class="form-group">
+    <label for="datenaissance"><b>Date de naissance</b></label><br>
+    <input type="date"  name="datenaissance"name="datenaissance" id="datenaissance" class="form-control" formControlName="date"><br><br>
+</div>
+   
+<div class="form-group">
+      <label for="sexe" ><b>Sexe :</b></label><br>
+      <input  type="radio" id="sexe"  name="sexe"   value="M" [ngModel]="defaultgender" class="form-control" formControlName="sexe">M  
+      <input  type="radio"  id = "sexe" value="F" name="sexe" [ngModel]="defaultgender" class="form-control" formControlName="sexe">F<br><br>
+    </div>
+
+    <div class="form-group">
+    <label for="telephone"><b>Téléphone</b></label>
+    <input type="text" placeholder="Entrer votre numéro mobile" name="telephone" id="telephone" class="form-control" formControlName="telephone"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="fonction"><b>Fonction professionnelle</b></label>
+    <input type="text" placeholder="Entrer votre fonction" name="fonction" [ngModel]="defaultfunction"  id="fonction" class="form-control" formControlName="fonction"><br>
+  </div>
+
+    <div class="form-group">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Entrer votre Email" name="email" id="email" class="form-control" formControlName="email">
+  </div>
+
+    <div class="form-group">
+    <label for="psw"><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entrer le mot de passe" name="psw" id="psw" class="form-control" formControlName="password">
+</div>
+
+    <div class="form-group">
+    <label for="pswrepeat"><b>Confirmer le mot de passe</b></label>
+    <input type="password" placeholder="confirmer le mot de passe" name="pswrepeat" id="pswrepeat" class="form-control" formControlName="pswrepeat">
+  </div>
+    <!--div class="form-group">
+      <label for="avatar"><b>Avatar (format "JPG" moins de "2 Mo")  :</b></label><br>
+      <input  type="file" id="avatar"name="avatar" ngModel>
+
+    </div--><br>
+
+    <hr>
+    <p>En cliquant sur S'inscrire, vous acceptez <a routerLink="../a_propos">nos conditions générales</a>
+     et découvrez comment nous recueillons, utilisons et partageons vos données et 
+      comment nous utilisons les cookies.</p>
+
+    <button type="submit" class="registerbtn">S'inscrire</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Avez vous déjà un compte ? <a routerLink="acceuil">Connexion</a>.</p>
+  </div>
+</form><br><br>
+
+
+<!--div class="container-fluid p-0">
+
+     
+           
+        
+       <div class="form-group">
+    
+        <h3>Vous êtes un professionnel ? Inscrivez-vous dans <a routerLink="#" class="lien"> l'Espace Pro</a>
+      </h3>
+    </div>
+
+</div-->
+
+

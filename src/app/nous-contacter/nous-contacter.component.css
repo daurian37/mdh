@@ -1,0 +1,107 @@
+/*********************************
+7. Contact
+*********************************/
+
+.contact
+{
+	width: 100%;
+	background: #FFFFFF;
+}
+
+.contact_input
+{
+	width: 100%;
+	height: 53px;
+	margin-bottom: 18px;
+	background: #f5f2fa;
+	border: none;
+	outline: none;
+	padding-left: 25px;
+	border-bottom: solid 3px green;
+}
+.contact_textarea
+{
+	height: 263px;
+	padding-top: 18px;
+	border-bottom: solid 4px green;
+}
+.contact_input::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: green !important;
+}
+.contact_input:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: green !important;
+}
+.contact_input::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: green !important;
+} 
+.contact_input:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: green !important;
+}
+.contact_input::input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: green !important;
+}
+.contact_button
+{
+	width: 181px;
+	height: 50px;
+	background: green;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	margin-top: 3px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.contact_buttonx
+{
+	width: 181px;
+	height: 50px;
+	background: #f5f2fa;
+    border: solid 2px green;
+	cursor: pointer;
+	outline: none;
+	margin-top: 3px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.contact_button span::after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 3px;
+	background: #f5f2fa;
+}
+.contact_button:hover
+{
+	background: #f5f2fa;
+    color: green;
+}

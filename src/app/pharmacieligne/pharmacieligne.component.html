@@ -1,0 +1,141 @@
+<app-header></app-header>
+
+     <div class="container-fluid">
+     
+     <div class="headtext px-5">
+         <h2 class="ui left floated header">MyDoctorHome <small>la médécine à la maison</small></h2>
+         <hr>
+     </div>
+ 
+     <div class="row col-lg-10 offset-1 jumbotron my-5">
+             <div class="col-lg-6">
+                 <h2 class="">Pharmacie en ligne</h2>
+                 <p>Fini les temps d'attente dans les pharmacies
+ Avec MyDoctorHome commander vos produits dans la pharmacie la plus proche et faites vous livrer chez vous
+ Bien plus encore, commander des produits médicals en France et à l'étranger
+ 
+                 </p>
+             </div>   
+             <div class="col-lg-6">
+       
+             <img src="assets/Images/dc4.jpg" class="imgC">     
+            </div>
+             </div>
+
+    <h2 style="color: green">Produits disponibles</h2><br>
+  
+
+<!--Affichages des produits et filtre-->
+
+<div class="container-fluid row" id="pg" >
+  
+    <!--partie filtre-->
+    <div class="col-2 " style="margin-top: 20px;">
+
+        <form class="" style="margin-right: 10px; ">
+              <div class="form-group">
+                <label for="rech">Rechercher</label>
+                <input type="search" class="form-control" id="rech" placeholder="saisir le produit">
+              </div>
+              <button type="button" class="btn btn-success" id="sub">recherche</button>
+              
+        </form>
+     </div>
+
+  
+  <!--partie affichage produit-->
+   <div class="col-10 ">
+    <div class="row" id="resultat">
+      <div class="row produit">            
+       
+             
+          <div *ngFor="let produits of produit; let i=index">
+      
+        <div class="card " style="width: 16rem; margin-top: 20px; margin-left: 10px; ">
+                          
+          <!-- Vous allez changer la taille des images ici -->
+            <div style="text-align:center">
+               <img class="card-img-top" style="width: 13rem; height: 9rem" src="assets/Images/dc4.jpg" alt="image produit">
+            </div>
+            
+      
+            <div class="card-body">
+              <h5 class="card-title">{{produits.nom}} </h5>
+      
+              <h2>{{produits.prix}} € </h2>
+      
+              <p class="card-text">{{produits.description}}</p>
+              
+              <a href="" class="btn btn-success">Ajouter au panier</a>
+            </div>
+            <div class="card-footer text-muted">
+              <a [routerLink]="produits.id">Détail</a>
+            </div>
+          </div>
+      
+        </div>
+
+    </div>
+  </div>
+
+
+</div>
+      <!--Pagination @by smeth-->
+ 
+
+<!--FIN Affichages des produits-->
+
+
+
+
+<script>
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+  })
+
+$(function(){
+    $.get("./req.php");
+
+
+});
+
+
+//recherche intanrané by  @smeth
+$(function(){
+
+
+
+
+// a chaque saisi du clavier
+    $('#rech').keyup(function(){
+
+        let val_saisi = $('#rech').val();
+
+        $.ajax({
+
+          type: 'GET',
+          url: './fonction/rech_data.php',
+          data: "re=" + encodeURIComponent(val_saisi),
+          success: function(data){
+            
+                if(val_saisi.length>0){
+
+                $('#resultat').html(data);
+                }
+                                   
+
+          
+          }
+        });
+
+
+    });
+
+});
+</script>
+
+
+</div><br><br><br><br>
+
+  
